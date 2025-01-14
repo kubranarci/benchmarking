@@ -33,10 +33,13 @@ jobs:
       matrix:
         NXF_VER:
           - "24.04.2"
-          - "latest-stable"
+          - "latest-everything"
         profile:
+          - "conda"
           - "docker"
           - "singularity"
+        test_name:
+          - "test"
         isMaster:
           - ${{ github.base_ref == 'master' }}
         # Exclude conda and singularity on dev
